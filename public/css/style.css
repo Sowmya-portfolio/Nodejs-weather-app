@@ -1,0 +1,20 @@
+header {
+
+  background-color: blanchedalmond;
+ 
+  
+ 
+}
+
+/* .main {
+  flex-grow: 1;
+} */
+.content{
+  margin-top: 200px;
+}
+footer {
+  position: fixed;
+  background-color: aquamarine;
+  bottom: 0;
+  width: 100%;
+}

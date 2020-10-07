@@ -4,10 +4,12 @@ const hbs=require('hbs');
 const cast = require('./public/utils/weatherForeCast');
 const geo = require('./public/utils/geoCode');
 //const place=process.argv[2];
-
+//add port as heroku port from environment variable 0r 3000(if that is not available)
+const port=process.env.PORT || 3000;
 //create server
 const app=express()
-
+//console.log(__dirname);
+//__dirname:C:\Users\Wavicledata\Desktop\Node DB\Node js Course\Projects\express web server
 //set view engine and viewspath(optional--default is views)
 app.set('view engine','hbs');
 const viewsPath=path.join(__dirname,'/templates/views')
@@ -117,6 +119,6 @@ else{
       message:'page not found'
     })
   })
-app.listen('3000',()=>{
-    console.log("server is up on port 3000");
+app.listen(port,()=>{
+    console.log("server is up on port" +port);
 })
